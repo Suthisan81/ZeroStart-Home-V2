@@ -9,6 +9,7 @@ header {
     background-color: #313775;
     color: white;
     padding: 3px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* เพิ่มเงาให้ฟอร์มเด่นขึ้น */
 }
 
 .header-container {
@@ -179,11 +180,11 @@ header {
     top: 50%; /* กำหนดให้อยู่ตรงกลางในแนวตั้ง */
     left: 50%; /* กำหนดให้อยู่ตรงกลางในแนวนอน */
     transform: translate(-50%, -50%); /* ปรับตำแหน่งให้อยู่ตรงกลางจริงๆ */
-    max-width: 400px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* เพิ่มพื้นหลังโปร่งแสง */
+    width: 600px;
+    padding: 40px 40px;
+    background-color: white;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 20px;
     z-index: 1000; /* ให้ฟอร์มอยู่เหนือรูป */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* เพิ่มเงาให้ฟอร์มเด่นขึ้น */
 }
@@ -197,23 +198,25 @@ header {
 form label {
     display: block;
     margin-bottom: 8px;
-    font-weight: bold;
 }
 
 form input, form textarea, form button {
-    width: 100%;
-    padding: 10px;
+    width: 93%;
+    padding: 10px 20px;
+    font-size: 16px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
 form button.submit-btn {
-    background-color: #313775;
+    background-color: #2F2E8B;
     color: white;
-    border: none;
+    font-size: 16px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 15px;
 }
 
 form button.submit-btn:hover {
@@ -227,8 +230,6 @@ footer {
     padding: 10px 0;
     text-align: center;
     width: 100%;
-    position: fixed;
-    /* ตรึงฟุตเตอร์ให้อยู่ที่ขอบล่างจอ */
     bottom: 0;
     /* ระบุตำแหน่งที่ขอบล่าง */
     z-index: 1000;
