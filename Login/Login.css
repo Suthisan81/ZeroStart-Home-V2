@@ -1,0 +1,260 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #313775;
+    color: white;
+    padding: 3px;
+    position: relative; /* กำหนด position เพื่อให้ z-index ทำงาน */
+    z-index: 1010; /* เพิ่มระดับ z-index ให้สูงกว่า .container */
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 1px;
+}
+
+.hamburger-menu {
+    display: inline-block;
+    cursor: pointer;
+    position: relative; /* หรือ absolute ตามโครงสร้าง */   
+    z-index: 1001;
+}
+
+.bar {
+    width: 20px;
+    height: 1.5px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.logo {
+    flex: 2;
+    text-align: left;
+    padding: 10px 0 0 0;
+}
+
+.name {
+    display: inline-block; 
+    vertical-align: middle; 
+    margin-bottom: 25px;
+    font-size: 21px;
+}
+
+.logo-image {
+    width: 40%;
+    /* ปรับขนาดโลโก้ตามต้องการ */
+    max-width: 75px;
+    /* กำหนดขนาดสูงสุดเพื่อไม่ให้ใหญ่เกินไป */
+}
+
+
+.large-product-image img {
+    width: auto;
+    height: 100%;
+    opacity: 0.7;
+}
+
+
+.menu-items {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    display: inline-block; 
+    vertical-align: middle; 
+    margin-top: 10px;
+}
+
+.menu-items a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.register {
+    flex: 1;
+    text-align: right;
+}
+
+.register a {
+    color: white;
+    text-decoration: none;
+}
+
+.image-user {
+    display: inline-block; 
+    vertical-align: top; 
+    width: 40%;
+    max-width: 35px;
+}
+
+
+.large-product-image {
+    position: relative; /* ทำให้เป็น container ของฟอร์ม */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.large-product-image img {
+    width: 100%;
+    height: auto;
+    opacity: 0.7; /* ปรับความโปร่งใสเพื่อให้ฟอร์มโดดเด่นขึ้น */
+}
+
+
+.container {
+    position: absolute; /* วางฟอร์มบนรูป */
+    top: 50%; /* กำหนดให้อยู่ตรงกลางในแนวตั้ง */
+    left: 50%; /* กำหนดให้อยู่ตรงกลางในแนวนอน */
+    transform: translate(-50%, -50%); /* ปรับตำแหน่งให้อยู่ตรงกลางจริงๆ */
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0); /* เพิ่มพื้นหลังโปร่งแสง */
+    border: 1px solid #cccccc00;
+    border-radius: 8px;
+    z-index: 1000; /* ให้ฟอร์มอยู่เหนือรูป */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0); /* เพิ่มเงาให้ฟอร์มเด่นขึ้น */
+}
+
+  
+.login-box {
+    position: relative; /* คงตำแหน่ง relative ไว้ */
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px 40px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+    z-index: 1010; /* เพิ่มระดับเลเยอร์ให้สูงกว่าพื้นหลัง */
+}
+  
+.login-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+  
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+  
+.form-group label {
+    font-size: 16px;
+    color: #333;
+}
+  
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+  
+.form-group a {
+    font-size: 14px;
+    color: red;
+    text-decoration: none;
+}
+  
+  /* ปุ่ม */
+.btn {
+    background-color: #2F2E8B;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+  
+.btn:hover {
+    background-color: #4746ad;
+}
+  
+  /* ไอคอน Social */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+  
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 1;
+}
+  
+.divider {
+    margin: 15px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+
+footer {
+    background-color: #313775;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    /* ตรึงฟุตเตอร์ให้อยู่ที่ขอบล่างจอ */
+    bottom: 0;
+    /* ระบุตำแหน่งที่ขอบล่าง */
+    z-index: 1000;
+    /* ป้องกันไม่ให้เนื้อหาอื่นบัง */
+}
+
+.creator-container {
+    display: flex;
+    /* ใช้ flexbox เพื่อจัดการตำแหน่งในแนวนอน */
+    justify-content: center;
+    /* กระจายระหว่างช่องว่างในแนวนอน */
+    gap: 10px;
+    /* ระยะห่างระหว่าง .creator แต่ละอัน */
+    /*flex-wrap: wrap;        /* ถ้าหน้าจอเล็กจะทำให้แถวใหม่ */
+    padding: 20px;
+}
+
+.creator {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    background-color: #313775;
+    border: 1px solid #313775;
+    max-width: 300px;
+    /* ปรับขนาดให้ไม่เกิน 300px */
+    width: 200%;
+    /* ทำให้แต่ละ .creator สามารถขยายได้ */
+    border-radius: 8px;
+    text-align: left;
+}
+
+.creator-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.creator-info a:hover {
+    text-decoration: underline;
+}
+
+.creator-info h1 {
+    margin: 10px 0;
+    font-size: 16px;
+}

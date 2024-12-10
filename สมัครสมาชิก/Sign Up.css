@@ -1,0 +1,274 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #313775;
+    color: white;
+    padding: 3px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 1px;
+}
+
+.hamburger-menu {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar {
+    width: 20px;
+    height: 1.5px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.logo {
+    flex: 2;
+    text-align: left;
+    padding: 10px 0 0 0;
+}
+
+.name {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 25px;
+    font-size: 21px;
+}
+
+.logo-image {
+    width: 40%;
+    /* ปรับขนาดโลโก้ตามต้องการ */
+    max-width: 75px;
+    /* กำหนดขนาดสูงสุดเพื่อไม่ให้ใหญ่เกินไป */
+}
+
+
+.menu-items {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 10px;
+}
+
+.menu-items a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.register {
+    flex: 1;
+    text-align: right;
+}
+
+.register a {
+    color: white;
+    text-decoration: none;
+}
+
+.image-user {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    max-width: 35px;
+}
+
+.large-product-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin: 0;
+}
+
+.large-product-image img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+}
+
+.search-overlay {
+    position: absolute;
+    top: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+    z-index: 1;
+    /* เพิ่ม z-index ให้แถบค้นหาอยู่เหนือภาพ */
+}
+
+.search-overlay input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 20px 0 0 20px;
+    border: 1px solid #ccc;
+}
+
+.search-overlay button {
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+    background-color: #16285F;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.product-wrapper {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1250px;
+    overflow-x: auto;
+}
+
+.image-product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.image-title {
+    text-align: left;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.image-more {
+    text-align: right;
+    font-size: 16px;
+    color: #16285F;
+    text-decoration: none;
+}
+
+.image-more a:hover {
+    text-decoration: underline;
+}
+
+.large-product-image {
+    position: relative; /* ทำให้เป็น container ของฟอร์ม */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.large-product-image img {
+    width: 100%;
+    height: auto;
+    opacity: 0.7; /* ปรับความโปร่งใสเพื่อให้ฟอร์มโดดเด่นขึ้น */
+}
+
+.form-section {
+    position: absolute; /* วางฟอร์มบนรูป */
+    top: 50%; /* กำหนดให้อยู่ตรงกลางในแนวตั้ง */
+    left: 50%; /* กำหนดให้อยู่ตรงกลางในแนวนอน */
+    transform: translate(-50%, -50%); /* ปรับตำแหน่งให้อยู่ตรงกลางจริงๆ */
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* เพิ่มพื้นหลังโปร่งแสง */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    z-index: 1000; /* ให้ฟอร์มอยู่เหนือรูป */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* เพิ่มเงาให้ฟอร์มเด่นขึ้น */
+}
+
+
+.form-section h2 {
+    text-align: center;
+    color: #313775;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button.submit-btn {
+    background-color: #313775;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button.submit-btn:hover {
+    background-color: #16285F;
+}
+
+
+footer {
+    background-color: #313775;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    /* ตรึงฟุตเตอร์ให้อยู่ที่ขอบล่างจอ */
+    bottom: 0;
+    /* ระบุตำแหน่งที่ขอบล่าง */
+    z-index: 1000;
+    /* ป้องกันไม่ให้เนื้อหาอื่นบัง */
+}
+
+.creator-container {
+    display: flex;
+    /* ใช้ flexbox เพื่อจัดการตำแหน่งในแนวนอน */
+    justify-content: center;
+    /* กระจายระหว่างช่องว่างในแนวนอน */
+    gap: 10px;
+    /* ระยะห่างระหว่าง .creator แต่ละอัน */
+    /*flex-wrap: wrap;        /* ถ้าหน้าจอเล็กจะทำให้แถวใหม่ */
+    padding: 20px;
+}
+
+.creator {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    background-color: #313775;
+    border: 1px solid #313775;
+    max-width: 300px;
+    /* ปรับขนาดให้ไม่เกิน 300px */
+    width: 200%;
+    /* ทำให้แต่ละ .creator สามารถขยายได้ */
+    border-radius: 8px;
+    text-align: left;
+}
+
+.creator-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.creator-info a:hover {
+    text-decoration: underline;
+}
+
+.creator-info h1 {
+    margin: 10px 0;
+    font-size: 16px;
+}
