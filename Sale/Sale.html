@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale</title>
+    <link rel="stylesheet" href="Sale.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" class="logo-image" alt="ZeroStart Home Logo">
+                <span class="name">ZeroStart Home</span>
+            </div>
+
+            <div class="register">
+                <nav class="menu-items">
+                    <a href="#">ซื้อ</a>
+                    <a href="#">เช่า</a>
+                    <a href="#">ขาย</a>
+                    <a href="#">นายหน้า</a>
+                    <a href="#">เกี่ยวกับ</a>
+
+
+
+                    <a href="#" class="hamburger-menu">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </a>
+
+                    <img src="images/user.png" class="image-user">
+            </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="large-product-image">
+        <img src="images/homepage1.jpeg" class="resize-image">
+        <div class="wrapper">
+            <div class="title">ประกาศขาย</div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <div class="step-indicator">
+            <div class="step active">1</div>
+            <div class="step">2</div>
+            <div class="step">3</div>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label>สถานะของผู้ประกาศ</label>
+                <div class="button-group">
+                    <button type="button">เจ้าของ (Owner)</button>
+                    <button type="button">นายหน้า/ตัวแทนของบริษัท</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>ประเภทประกาศ</label>
+                <div class="button-group">
+                    <button type="button">ขาย</button>
+                    <button type="button">ขายดาวน์</button>
+                    <button type="button">ให้เช่า</button>
+                    <button type="button">เซ้ง</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>ประเภทอสังหาริมทรัพย์</label>
+                <div class="button-group">
+                    <button type="button">คอนโด</button>
+                    <button type="button">บ้าน</button>
+                    <button type="button">ตึกแถว</button>
+                    <button type="button">สำนักงาน</button>
+                    <button type="button">โรงงาน</button>
+                    <button type="button">โกดัง</button>
+                </div>
+            </div>
+
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const buttons = document.querySelectorAll('button');
+                    buttons.forEach(button => {
+                        button.addEventListener('click', () => {
+                            // ลบคลาส .selected จากทุกปุ่ม
+                            buttons.forEach(btn => btn.classList.remove('selected'));
+                            // เพิ่มคลาส .selected ให้กับปุ่มที่คลิก
+                            button.classList.add('selected');
+                        });
+                    });
+                });
+            </script>
+
+
+
+            <div class="form-group">
+                <label>ทำเล</label>
+                <input type="text" placeholder="พิมพ์ชื่อทำเล">
+            </div>
+
+            <div class="form-group">
+                <label>หัวข้อ</label>
+                <input type="text" placeholder="สร้างหัวข้อที่น่าสนใจ">
+            </div>
+
+            <div class="form-group">
+                <label>รายละเอียดหัวข้อ</label>
+                <textarea placeholder="บรรยายรายละเอียดของอสังหาริมทรัพย์..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <button class="next-button">ถัดไป</button>
+            </div>
+
+        </form>
+    </div>
+
+
+    <footer>
+        <div class="creator-container">
+            <div class="creator">
+                <div class="creator-info">
+                    <a href="mailto:djdosfhwgf@gmail.com">นายสุทธิสาร ซุ่นฮ้อ</a>
+                    <h1>E-mail: <a href="mailto:djdosfhwgf@gmail.com">djdosfhwgf@gmail.com</a></h1>
+                    <h1>Line: <a href="https://line.me/ti/p/fjwfo566">fjwfo566</a></h1>
+                    <h1>Tel: <a href="tel:+66432535474">0432535474</a></h1>
+                </div>
+            </div>
+
+            <div class="creator">
+                <div class="creator-info">
+                    <a href="mailto:djdosfhwgf@gmail.com">นายสุทธิสาร ซุ่นฮ้อ</a>
+                    <h1>E-mail: <a href="mailto:djdosfhwgf@gmail.com">djdosfhwgf@gmail.com</a></h1>
+                    <h1>Line: <a href="https://line.me/ti/p/fjwfo566">fjwfo566</a></h1>
+                    <h1>Tel: <a href="tel:+66432535474">0432535474</a></h1>
+                </div>
+            </div>
+
+            <div class="creator">
+                <div class="creator-info">
+                    <a href="mailto:djdosfhwgf@gmail.com">นายสุทธิสาร ซุ่นฮ้อ</a>
+                    <h1>E-mail: <a href="mailto:djdosfhwgf@gmail.com">djdosfhwgf@gmail.com</a></h1>
+                    <h1>Line: <a href="https://line.me/ti/p/fjwfo566">fjwfo566</a></h1>
+                    <h1>Tel: <a href="tel:+66432535474">0432535474</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <p>&copy; ผู้จัดทำ</p>
+    </footer>
+
+
+</body>
+
+</html>
