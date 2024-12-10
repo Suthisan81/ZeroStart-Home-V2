@@ -6,7 +6,7 @@ CREATE TABLE Users (
     Password VARCHAR(255) NOT NULL,
     Email VARCHAR(100) NOT NULL UNIQUE,
     PhoneNumber VARCHAR(15),
-    Role ENUM('user', 'admin') NOT NULL
+    Role ENUM('User', 'Admin') NOT NULL
 );
 
 CREATE TABLE Agents (
@@ -17,73 +17,67 @@ CREATE TABLE Agents (
     FOREIGN KEY (UserID) REFERENCES Users(UserID)
 );
 
-CREATE TABLE Property (
+CREATE TABLE PropertyLocations (
+    LocationID INT AUTO_INCREMENT PRIMARY KEY,
+    City VARCHAR(50) NOT NULL,
+    Province VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Properties (
     PropertyID INT AUTO_INCREMENT PRIMARY KEY,
     PropertyName VARCHAR(100) NOT NULL,
     AgentID INT,
-    TypeID INT,
+    Type ENUM('Condo', 'Land', 'Villa', 'House', 'Townhouse', 'Apartment'),
     LocationID INT,
-    Description VARCHAR(500),
-    Price INT,
+    Description TEXT,
+    Price DECIMAL(10, 2),
     Bedrooms INT,
-    Bathrooms FLOAT,
-    Sqft FLOAT,
-    PropertyStatus VARCHAR(15) NOT NULL,
-    MatterportURL VARCHAR(200),
-    YouTubeURL VARCHAR(200),
-    TikTokURL VARCHAR(200),
-    Exceptions ENUM('foreignerquota', 'petsallow', 'duplex', 'penthouse') NOT NULL,
+    Bathrooms DECIMAL(3, 1),
+    Sqft DECIMAL(10, 2),
+    PropertyStatus VARCHAR(20) NOT NULL,
+    MatterportURL VARCHAR(255),
+    YouTubeURL VARCHAR(255),
+    TikTokURL VARCHAR(255),
+    Parameter ENUM('foreignerquota', 'petsallow', 'duplex', 'penthouse') NOT NULL,
     FOREIGN KEY (AgentID) REFERENCES Agents(AgentID),
-    FOREIGN KEY (TypeID) REFERENCES PropertyType(TypeID),
-    FOREIGN KEY (LocationID) REFERENCES PropertyLocation(LocationID)
-);
-
-CREATE TABLE PropertyType (
-    TypeID INT AUTO_INCREMENT PRIMARY KEY,
-    TypeDescription VARCHAR(100) NOT NULL
-);
-
-CREATE TABLE PropertyLocation (
-    LocationID INT AUTO_INCREMENT PRIMARY KEY,
-    City VARCHAR(20) NOT NULL,
-    Province VARCHAR(20) NOT NULL
+    FOREIGN KEY (LocationID) REFERENCES PropertyLocations(LocationID)
 );
 
 CREATE TABLE Amenities (
     PropertyID INT PRIMARY KEY,
-    Parking BOOL,
-    Pool BOOL,
-    Gym BOOL,
-    Garden BOOL,
-    Safety BOOL,
-    WiFi BOOL,
-    FOREIGN KEY (PropertyID) REFERENCES Property(PropertyID)
+    Parking BOOLEAN,
+    Pool BOOLEAN,
+    Gym BOOLEAN,
+    Garden BOOLEAN,
+    Safety BOOLEAN,
+    WiFi BOOLEAN,
+    FOREIGN KEY (PropertyID) REFERENCES Properties(PropertyID)
 );
 
-CREATE TABLE PTransaction (
+CREATE TABLE Transactions (
     TransactionID INT AUTO_INCREMENT PRIMARY KEY,
     PropertyID INT NOT NULL,
-    BuyerName VARCHAR(50) NOT NULL,
-    SellerName VARCHAR(50) NOT NULL, 
-    Price INT NOT NULL,
+    BuyerName VARCHAR(100) NOT NULL,
+    SellerName VARCHAR(100) NOT NULL, 
+    Price DECIMAL(10, 2) NOT NULL,
     TransactionDate DATE,
-    TransactionStatus VARCHAR(10),
-    FOREIGN KEY (PropertyID) REFERENCES Property(PropertyID)
+    TransactionStatus VARCHAR(20),
+    FOREIGN KEY (PropertyID) REFERENCES Properties(PropertyID)
 );
 
-CREATE TABLE UserReview (
+CREATE TABLE UserReviews (
     ReviewID INT AUTO_INCREMENT PRIMARY KEY,
     PropertyID INT NOT NULL,
     UserID INT NOT NULL,
     Rating INT NOT NULL,
-    ReviewText VARCHAR(200),
+    ReviewText TEXT,
     ReviewDate DATE,
-    FOREIGN KEY (PropertyID) REFERENCES Property(PropertyID),
+    FOREIGN KEY (PropertyID) REFERENCES Properties(PropertyID),
     FOREIGN KEY (UserID) REFERENCES Users(UserID)
 );
 
 CREATE TABLE Images (
-    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ImageID INT AUTO_INCREMENT PRIMARY KEY,
     Name VARCHAR(255) NOT NULL,
     Image BLOB NOT NULL
 );
