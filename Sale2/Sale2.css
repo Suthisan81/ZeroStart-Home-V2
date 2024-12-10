@@ -209,8 +209,10 @@ label {
 .step-indicator {
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-bottom: 50px;
+    gap: 50px;  /* เพิ่มระยะห่างระหว่าง step */
 }
+
 
 .step {
     width: 50px;
@@ -224,24 +226,12 @@ label {
     font-weight: bold;
     color: #666;
     font-size: 24px; /* ปรับขนาดตัวเลขให้ใหญ่ขึ้น */
-    position: relative;
 }
 
 .step.active {
     background-color: #313775;
     color: white;
 }
-
-/* .step:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    right: -20px; /* กำหนดระยะห่างระหว่างวงกลม */
-    /*top: 50%;
-    width: 40px; /* ขนาดของเส้นเชื่อม */
-    /*height: 2px; /* ความหนาของเส้น */
-    /*background-color: #ddd; /* สีของเส้น */
-    /*transform: translateY(-50%); จัดตำแหน่งเส้นให้ตรงกลาง
-} */
 
 .form-group {
     margin-bottom: 40px;

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale2</title>
+    <link rel="stylesheet" href="Sale2.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" class="logo-image" alt="ZeroStart Home Logo">
+                <span class="name">ZeroStart Home</span>
+            </div>
+
+            <div class="register">
+                <nav class="menu-items">
+                    <a href="#">ซื้อ</a>
+                    <a href="#">เช่า</a>
+                    <a href="#">ขาย</a>
+                    <a href="#">นายหน้า</a>
+                    <a href="#">เกี่ยวกับ</a>
+
+
+
+                    <a href="#" class="hamburger-menu">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </a>
+
+                    <img src="images/user.png" class="image-user">
+            </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="large-product-image">
+        <img src="images/homepage1.jpeg" class="resize-image">
+        <div class="wrapper">
+            <div class="title">ประกาศขาย</div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <div class="step-indicator">
+            <div class="step active">1</div>
+            <div class="step active">2</div>
+            <div class="step">3</div>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label for="bedrooms">ห้องนอน</label>
+                <input type="number" id="bedrooms" name="bedrooms" placeholder="ระบุจำนวนห้องนอน">
+            </div>
+
+            <div class="form-group">
+                <label for="bathrooms">ห้องน้ำ</label>
+                <input type="number" id="bathrooms" name="bathrooms" placeholder="ระบุจำนวนห้องน้ำ">
+            </div>
+
+            <div class="form-group">
+                <label for="floor">ชั้น</label>
+                <input type="number" id="floor" name="floor" placeholder="ระบุชั้นที่ตั้งอสังหาริมทรัพย์">
+            </div>
+
+            <div class="form-group">
+                <label for="area">พื้นที่ใช้สอย (ตร.ม.)</label>
+                <input type="number" id="area" name="area" placeholder="ระบุพื้นที่ใช้สอย">
+            </div>
+
+            <div class="form-group">
+                <label for="price">ราคา</label>
+                <input type="text" id="price" name="price" placeholder="ระบุราคาขาย">
+            </div>
+
+            <div class="form-group">
+                <label>ลักษณะพิเศษอื่น ๆ</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="features" value="foreign-quota"> โควต้าต่างชาติ</label>
+                    <label><input type="checkbox" name="features" value="pet-friendly"> อนุญาตเลี้ยงสัตว์</label>
+                    <label><input type="checkbox" name="features" value="duplex"> ห้องแบบ Duplex</label>
+                    <label><input type="checkbox" name="features" value="penthouse"> ห้องแบบ Penthouse</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="matterport">Matterport URL (หากมี)</label>
+                <input type="url" id="matterport" name="matterport" placeholder="ใส่ลิงก์ Matterport">
+            </div>
+
+            <div class="form-group">
+                <label for="youtube">YouTube URL (หากมี)</label>
+                <input type="url" id="youtube" name="youtube" placeholder="ใส่ลิงก์วิดีโอ YouTube">
+            </div>
+
+            <div class="form-group">
+                <label for="tiktok">Tiktok URL (หากมี)</label>
+                <input type="url" id="tiktok" name="tiktok" placeholder="ใส่ลิงก์วิดีโอ Tiktok">
+            </div>
+
+            <div class="form-group">
+                <label for="images">รูปภาพอสังหาริมทรัพย์</label>
+                <input type="file" id="images" name="images" multiple>
+            </div>
+
+            <div class="form-buttons">
+                <button type="button" class="back-button">ย้อนกลับ</button>
+                <button type="submit" class="next-button">ถัดไป</button>
+            </div>
+        
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const buttons = document.querySelectorAll('button');
+                    buttons.forEach(button => {
+                        button.addEventListener('click', () => {
+                            // ลบคลาส .selected จากทุกปุ่ม
+                            buttons.forEach(btn => btn.classList.remove('selected'));
+                            // เพิ่มคลาส .selected ให้กับปุ่มที่คลิก
+                            button.classList.add('selected');
+                        });
+                    });
+                });
+            </script>
+        </form>
+    </div>
+
+
+    <footer>
+        <div class="creator-container">
+            <div class="creator">
+                <div class="creator-info">
+                    <a href="mailto:djdosfhwgf@gmail.com">นายสุทธิสาร ซุ่นฮ้อ</a>
+                    <h1>E-mail: <a href="mailto:djdosfhwgf@gmail.com">djdosfhwgf@gmail.com</a></h1>
+                    <h1>Line: <a href="https://line.me/ti/p/fjwfo566">fjwfo566</a></h1>
+                    <h1>Tel: <a href="tel:+66432535474">0432535474</a></h1>
+                </div>
+            </div>
+
+            <div class="creator">
+                <div class="creator-info">
+                    <a href="mailto:djdosfhwgf@gmail.com">นายสุทธิสาร ซุ่นฮ้อ</a>
+                    <h1>E-mail: <a href="mailto:djdosfhwgf@gmail.com">djdosfhwgf@gmail.com</a></h1>
+                    <h1>Line: <a href="https://line.me/ti/p/fjwfo566">fjwfo566</a></h1>
+                    <h1>Tel: <a href="tel:+66432535474">0432535474</a></h1>
+                </div>
+            </div>
+
+            <div class="creator">
+                <div class="creator-info">
+                    <a href="mailto:djdosfhwgf@gmail.com">นายสุทธิสาร ซุ่นฮ้อ</a>
+                    <h1>E-mail: <a href="mailto:djdosfhwgf@gmail.com">djdosfhwgf@gmail.com</a></h1>
+                    <h1>Line: <a href="https://line.me/ti/p/fjwfo566">fjwfo566</a></h1>
+                    <h1>Tel: <a href="tel:+66432535474">0432535474</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <p>&copy; ผู้จัดทำ</p>
+    </footer>
+
+
+</body>
+
+</html>
