@@ -54,66 +54,81 @@
         </div>
 
         <form>
-            <div class="form-group">
-                <label for="bedrooms">ห้องนอน</label>
-                <input type="number" id="bedrooms" name="bedrooms" placeholder="ระบุจำนวนห้องนอน">
+            <div class="form-inline">
+                <div class="form-group">
+                    <label for="bedrooms">ห้องนอน</label>
+                    <input type="number" id="bedrooms" name="bedrooms" placeholder="1 ห้อง">
+                </div>
+
+                <div class="form-group">
+                    <label for="bathrooms">ห้องน้ำ</label>
+                    <input type="number" id="bathrooms" name="bathrooms" placeholder="1 ห้อง">
+                </div>
+
+                <div class="form-group">
+                    <label for="floor">ชั้น</label>
+                    <input type="number" id="floor" name="floor" placeholder="1 ชั้น">
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="bathrooms">ห้องน้ำ</label>
-                <input type="number" id="bathrooms" name="bathrooms" placeholder="ระบุจำนวนห้องน้ำ">
-            </div>
+            <div class="form-inline">
+                <div class="form-group">
+                    <label for="area">พื้นที่ใช้สอย (ตร.ม.)</label>
+                    <input type="number" id="area" name="area" placeholder="ขนาดพื้นที่">
+                </div>
 
-            <div class="form-group">
-                <label for="floor">ชั้น</label>
-                <input type="number" id="floor" name="floor" placeholder="ระบุชั้นที่ตั้งอสังหาริมทรัพย์">
-            </div>
-
-            <div class="form-group">
-                <label for="area">พื้นที่ใช้สอย (ตร.ม.)</label>
-                <input type="number" id="area" name="area" placeholder="ระบุพื้นที่ใช้สอย">
-            </div>
-
-            <div class="form-group">
-                <label for="price">ราคา</label>
-                <input type="text" id="price" name="price" placeholder="ระบุราคาขาย">
+                <div class="form-group">
+                    <label for="price">ราคา</label>
+                    <input type="text" id="price" name="price" placeholder="ราคาที่ต้องการขาย">
+                </div>
             </div>
 
             <div class="form-group">
                 <label>ลักษณะพิเศษอื่น ๆ</label>
                 <div class="checkbox-group">
-                    <label><input type="checkbox" name="features" value="foreign-quota"> โควต้าต่างชาติ</label>
-                    <label><input type="checkbox" name="features" value="pet-friendly"> อนุญาตเลี้ยงสัตว์</label>
-                    <label><input type="checkbox" name="features" value="duplex"> ห้องแบบ Duplex</label>
-                    <label><input type="checkbox" name="features" value="penthouse"> ห้องแบบ Penthouse</label>
+                    <div class="checkbox-item">
+                        <label><input type="checkbox" name="features" value="foreign-quota"> โควต้าต่างชาติ</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <label><input type="checkbox" name="features" value="pet-friendly"> อนุญาตเลี้ยงสัตว์</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <label><input type="checkbox" name="features" value="duplex"> ห้องแบบ Duplex</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <label><input type="checkbox" name="features" value="penthouse"> ห้องแบบ Penthouse</label>
+                    </div>
                 </div>
             </div>
+            
+
 
             <div class="form-group">
                 <label for="matterport">Matterport URL (หากมี)</label>
-                <input type="url" id="matterport" name="matterport" placeholder="ใส่ลิงก์ Matterport">
+                <input type="url" id="matterport" name="matterport" placeholder="Matterport link">
             </div>
 
             <div class="form-group">
                 <label for="youtube">YouTube URL (หากมี)</label>
-                <input type="url" id="youtube" name="youtube" placeholder="ใส่ลิงก์วิดีโอ YouTube">
+                <input type="url" id="youtube" name="youtube" placeholder="Youtube link">
             </div>
 
             <div class="form-group">
                 <label for="tiktok">Tiktok URL (หากมี)</label>
-                <input type="url" id="tiktok" name="tiktok" placeholder="ใส่ลิงก์วิดีโอ Tiktok">
+                <input type="url" id="tiktok" name="tiktok" placeholder="Tiktok link">
             </div>
 
-            <div class="form-group">
-                <label for="images">รูปภาพอสังหาริมทรัพย์</label>
+            <div class="form-group file-upload">
+                <label for="images">รูปภาพ อสังหาฯ ที่คุณต้องการขาย</label>
                 <input type="file" id="images" name="images" multiple>
+                <div style="border: 2px dashed #ccc; padding: 20px; text-align: center;">วางรูปภาพของคุณที่นี่</div>
             </div>
 
             <div class="form-buttons">
                 <button type="button" class="back-button">ย้อนกลับ</button>
                 <button type="submit" class="next-button">ถัดไป</button>
             </div>
-        
+
             <script>
                 document.addEventListener('DOMContentLoaded', () => {
                     const buttons = document.querySelectorAll('button');

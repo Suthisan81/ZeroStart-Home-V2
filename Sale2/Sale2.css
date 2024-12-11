@@ -233,9 +233,36 @@ label {
     color: white;
 }
 
-.form-group {
-    margin-bottom: 40px;
+.form-inline {
+    display: flex; /* จัดให้เป็น Flexbox */
+    justify-content: space-between; /* กระจายช่องว่างระหว่างแต่ละกลุ่ม */
+    gap: 50px; /* เพิ่มระยะห่างระหว่างแต่ละ form-group */
+    align-items: flex-start; /* จัด label และ input ให้เริ่มต้นที่ด้านบน */
 }
+
+.form-group {
+    flex: 1; /* ทำให้แต่ละ form-group มีขนาดพื้นที่เท่ากัน */
+    min-width: 150px; /* กำหนดขนาดขั้นต่ำของแต่ละกลุ่ม */
+}
+
+.checkbox-group {
+    display: flex; /* ใช้ Flexbox */
+    flex-wrap: wrap; /* อนุญาตให้ขึ้นบรรทัดใหม่ */
+    gap: 10px; /* เพิ่มช่องว่างระหว่าง checkbox */
+}
+
+.checkbox-item {
+    display: flex; /* จัด label และ input ให้อยู่ในแถวเดียวกัน */
+    align-items: center; /* จัดแนวกลางแนวตั้ง */
+    flex: 1 1 calc(50% - 10px); /* แต่ละ item ใช้พื้นที่ 50% ของบรรทัด */
+    margin-bottom: 10px; /* เพิ่มช่องว่างระหว่างบรรทัด */
+}
+
+.checkbox-item label {
+    margin: 0; /* กำจัด margin default */
+}
+
+
 
 .button-group {
     justify-content: center;
