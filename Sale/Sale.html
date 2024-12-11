@@ -57,46 +57,55 @@
             <div class="form-group">
                 <label>สถานะของผู้ประกาศ</label>
                 <div class="button-group">
-                    <button type="button">เจ้าของ (Owner)</button>
-                    <button type="button">นายหน้า/ตัวแทนของบริษัท</button>
+                    <button type="button" class="status-button">เจ้าของ (Owner)</button>
+                    <button type="button" class="status-button">นายหน้า/ตัวแทนของบริษัท</button>
                 </div>
             </div>
-
+            
             <div class="form-group">
                 <label>ประเภทประกาศ</label>
                 <div class="button-group">
-                    <button type="button">ขาย</button>
-                    <button type="button">ขายดาวน์</button>
-                    <button type="button">ให้เช่า</button>
-                    <button type="button">เซ้ง</button>
+                    <button type="button" class="listing-button">ขาย</button>
+                    <button type="button" class="listing-button">ขายดาวน์</button>
+                    <button type="button" class="listing-button">ให้เช่า</button>
+                    <button type="button" class="listing-button">เซ้ง</button>
                 </div>
             </div>
-
+            
             <div class="form-group">
                 <label>ประเภทอสังหาริมทรัพย์</label>
                 <div class="button-group">
-                    <button type="button">คอนโด</button>
-                    <button type="button">บ้าน</button>
-                    <button type="button">ตึกแถว</button>
-                    <button type="button">สำนักงาน</button>
-                    <button type="button">โรงงาน</button>
-                    <button type="button">โกดัง</button>
+                    <button type="button" class="property-type-button">คอนโด</button>
+                    <button type="button" class="property-type-button">บ้าน</button>
+                    <button type="button" class="property-type-button">ตึกแถว</button>
+                    <button type="button" class="property-type-button">สำนักงาน</button>
+                    <button type="button" class="property-type-button">โรงงาน</button>
+                    <button type="button" class="property-type-button">โกดัง</button>
                 </div>
             </div>
+            
 
 
             <script>
                 document.addEventListener('DOMContentLoaded', () => {
-                    const buttons = document.querySelectorAll('button');
-                    buttons.forEach(button => {
-                        button.addEventListener('click', () => {
-                            // ลบคลาส .selected จากทุกปุ่ม
-                            buttons.forEach(btn => btn.classList.remove('selected'));
-                            // เพิ่มคลาส .selected ให้กับปุ่มที่คลิก
-                            button.classList.add('selected');
-                        });
-                    });
-                });
+                    // ดึงทุกกลุ่มปุ่มที่มีคลาส .button-group
+                    const buttonGroups = document.querySelectorAll('.button-group');
+
+                    // เพิ่ม event listener ให้กับปุ่มในแต่ละกลุ่ม
+                    buttonGroups.forEach(group => {
+                        const buttons = group.querySelectorAll('button');
+        
+                        buttons.forEach(button => {
+                             button.addEventListener('click', () => {
+                                 // ลบคลาส .selected จากปุ่มทั้งหมดในกลุ่มนี้
+                                    buttons.forEach(btn => btn.classList.remove('selected'));
+                                        // เพิ่มคลาส .selected ให้กับปุ่มที่ถูกคลิก
+                                        button.classList.add('selected');
+            });
+        });
+    });
+});
+
             </script>
 
 
