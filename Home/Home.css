@@ -56,17 +56,16 @@ header {
 
 .menu-items {
     flex: 2;
-    display: flex;
-    justify-content: center;
-    display: inline-block; 
-    vertical-align: middle; 
+    display: flex; /* ใช้ flexbox หรือถ้าจะใช้ inline-block ให้ลบคุณสมบัติ flex ออก */
+    justify-content: center; /* เพิ่มเครื่องหมายเซมิโคลอนที่หายไป */
+    align-items: center; /* ใช้ align-items แทน vertical-align สำหรับ flexbox */
     margin-top: 10px;
 }
 
 .menu-items a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 20px;
 }
 
 .register {
