@@ -57,12 +57,16 @@ header {
     /* กำหนดขนาดสูงสุดเพื่อไม่ให้ใหญ่เกินไป */
 }
 
+.large-product-image {
+    position: relative; /* ทำให้เป็น container ของฟอร์ม */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 .large-product-image img {
-    position: relative; /* ทำให้เป็น container ของฟอร์ม */
-    display: flex;
-    justify-content: center;
-    width: 100vw;
+    width: 100%;
+    height: auto;
     opacity: 0.7;
 }
 
@@ -153,7 +157,7 @@ header {
   
 .login-box {
     position: absolute; /* คงตำแหน่ง relative ไว้ */
-    top: 50%; /* กำหนดให้อยู่ตรงกลางในแนวตั้ง */
+    top: 40%; /* กำหนดให้อยู่ตรงกลางในแนวตั้ง */
     left: 50%;
     transform: translate(-50%, -50%); /* ปรับตำแหน่งให้อยู่ตรงกลางจริงๆ */
     background-color: white;
