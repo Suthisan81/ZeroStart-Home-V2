@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZeroStart Rental Product</title>
+    <link rel="stylesheet" href="Agentdt.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" class="logo-image" alt="ZeroStart Home Logo">
+                <span class="name">ZeroStart Home</span>
+            </div>
+
+            <div class="register">
+                <nav class="menu-items">
+                    <a href="#">ซื้อ</a>
+                    <a href="#">เช่า</a>
+                    <a href="#">ขาย</a>
+                    <a href="#">นายหน้า</a>
+                    <a href="#">เกี่ยวกับ</a>
+
+                    <a href="#" class="hamburger-menu">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </a>
+
+                    <img src="images/user.png" class="image-user">
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Section Profile -->
+        <section class="profile">
+            <div class="profile-image">
+                <img src="images/agent1.jpg" alt="Profile Image">
+            </div>
+            <div class="profile-details">
+                <h2>นางสาวทองดิน กันตานา</h2>
+                <p>ID: 0392</p>
+                <p>ชื่อเล่น: น้ำ</p>
+                <p>ประสบการณ์: 2 ปี</p>
+                <p>ผู้ใช้บริการ: 105 คน</p>
+                <p><img src="images/telephoneicon.png" class="teleicon image"> 095-211-5466</p>
+                <p><img src="images/location.png" class="location image"> กรุงเทพฯ, เขตสะพานสูง</p>
+            </div>
+            <div class="chat-icon">
+                <button><img src="images/chat.png" alt="แชท"></button>
+            </div>
+        </section>
+        <h2>ผลงาน</h2>
+        <div class="gallery">
+            <button class="prev">‹</button>
+            <div class="slider-container">
+                <div class="slider">
+                    <img src="images/pic1.jpg" alt="Image 1">
+                    <img src="images/pic2.jpg" alt="Image 2">
+                    <img src="images/pic3.jpg" alt="Image 3">
+                    <img src="images/pic4.jpg" alt="Image 4">
+                    <img src="images/pic5.jpg" alt="Image 5">
+                </div>
+            </div>
+            <button class="next">›</button>
+        </div>
+
+        <script>
+            const slider = document.querySelector('.slider');
+            const prevButton = document.querySelector('.prev');
+            const nextButton = document.querySelector('.next');
+        
+            let currentIndex = 0;
+        
+            prevButton.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateSlider();
+                }
+            });
+        
+            nextButton.addEventListener('click', () => {
+                if (currentIndex < slider.children.length - 1) {
+                    currentIndex++;
+                    updateSlider();
+                }
+            });
+        
+            function updateSlider() {
+                const slideWidth = slider.children[0].offsetWidth + 10; // รวม margin
+                slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            }
+        </script>
+          
+    </main>
+
+   <!-- ส่วนท้าย -->
+    <footer>
+        <div class="creator-container">
+            <div class="creator">
+                <div class="creator-info">
+                    <a href="mailto:djdosfhwgf@gmail.com">นายสุทธิสาร ซุ่นฮ้อ</a>
+                    <h1>E-mail: <a href="mailto:djdosfhwgf@gmail.com">djdosfhwgf@gmail.com</a></h1>
+                    <h1>Line: <a href="https://line.me/ti/p/fjwfo566">fjwfo566</a></h1>
+                    <h1>Tel: <a href="tel:+66432535474">0432535474</a></h1>
+                </div>
+            </div>
+
+            <div class="creator">
+                <div class="creator-info">
+                    <a href="mailto:djdosfhwgf@gmail.com">นายสุทธิสาร ซุ่นฮ้อ</a>
+                    <h1>E-mail: <a href="mailto:djdosfhwgf@gmail.com">djdosfhwgf@gmail.com</a></h1>
+                    <h1>Line: <a href="https://line.me/ti/p/fjwfo566">fjwfo566</a></h1>
+                    <h1>Tel: <a href="tel:+66432535474">0432535474</a></h1>
+                </div>
+            </div>
+
+            <div class="creator">
+                <div class="creator-info">
+                    <a href="mailto:djdosfhwgf@gmail.com">นายสุทธิสาร ซุ่นฮ้อ</a>
+                    <h1>E-mail: <a href="mailto:djdosfhwgf@gmail.com">djdosfhwgf@gmail.com</a></h1>
+                    <h1>Line: <a href="https://line.me/ti/p/fjwfo566">fjwfo566</a></h1>
+                    <h1>Tel: <a href="tel:+66432535474">0432535474</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <p>&copy; ผู้จัดทำ</p>
+    </footer>
+
+
+</body>
+
+</html>

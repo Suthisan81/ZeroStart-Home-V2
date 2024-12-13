@@ -1,0 +1,289 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* ใช้ flexbox สำหรับ body */
+    min-height: 100vh; /* ให้ body มีความสูงเต็มหน้าจอ */
+}
+
+header {
+    background-color: #313775;
+    color: white;
+    padding: 3px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* เพิ่มเงาให้ฟอร์มเด่นขึ้น */
+    position: relative; /* กำหนด position เพื่อให้ z-index ทำงาน */
+    z-index: 1010; /* เพิ่มระดับ z-index ให้สูงกว่า .container */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 1px;
+}
+
+.hamburger-menu {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+}
+
+.bar {
+    width: 20px;
+    height: 1.5px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.logo {
+    flex: 2;
+    text-align: left;
+    padding: 10px 0 0 0;
+}
+
+.name {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 25px;
+    font-size: 21px;
+}
+
+.logo-image {
+    width: 40%;
+    max-width: 75px;
+}
+
+.large-product-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin: 0;
+}
+
+.large-product-image img {
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+}
+
+.menu-items {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.menu-items a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+.register {
+    flex: 1;
+    text-align: right;
+}
+
+.register a {
+    color: white;
+    text-decoration: none;
+}
+
+.image-user {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    max-width: 35px;
+}
+
+.container {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.profile-image img {
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.profile-details {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.teleicon {
+    width: 18px;
+    height: auto;
+    max-width: 25px; 
+    overflow: visible;
+    margin-right: 3px;
+}
+
+.location {
+    width: 20px;
+    height: auto;
+    max-width: 25px; 
+    overflow: visible;
+    margin-right: 3px;
+}
+
+/* ลบพื้นหลังของปุ่ม */
+.chat-icon button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* ไอคอนรูปภาพในปุ่ม */
+.chat-icon img {
+    width: 70px; /* กำหนดขนาดของไอคอน */
+    height: auto;
+    transition: opacity 0.3s, transform 0.2s; /* เพิ่มความนุ่มนวล */
+}
+
+/* เปลี่ยนสีเฉพาะที่รูปภาพเมื่อโฮเวอร์ */
+.chat-icon img:hover {
+    opacity: 0.7; /* ความโปร่งใส */
+}
+
+/* เมื่อคลิก (active) */
+.chat-icon img:active {
+    transform: scale(0.95); /* ลดขนาดเล็กน้อยเมื่อคลิก */
+    opacity: 0.5;
+}
+
+
+/* Gallery Section */
+.gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden; /* ซ่อนภาพที่เกินขอบ */
+    width: 100%;
+    max-width: 1000px;
+}
+
+.slider-container {
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden; /* ซ่อนส่วนที่เกินออกไป */
+}
+
+.slider {
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.5s ease-in-out; /* เลื่อนภาพนุ่มนวล */
+}
+
+.slider img{
+    width: 800px; /* ให้รูปภาพขยายเต็มความกว้างของ container */
+    height: 300px;
+    object-fit: cover; /* ตัดหรือขยายรูปภาพให้พอดีกับ container */
+    display: block; /* ป้องกันช่องว่างรอบภาพ */
+    object-position: center; /* จัดตำแหน่งรูปภาพให้อยู่ตรงกลาง */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    margin-right: 10px;
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 10%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+.creator-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.creator {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    background-color: #313775;
+    border: 1px solid #313775;
+    max-width: 300px;
+    width: 200%;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.creator-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.creator-info a:hover {
+    text-decoration: underline;
+}
+
+.creator-info h1 {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Icon with text section */
+.icon-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.icon-text i {
+    font-size: 20px;
+    color: #313775;
+}
+
+footer {
+    background-color: #313775;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: relative; /* ไม่ใช้ fixed หรือ absolute */
+    bottom: 0;
+}
