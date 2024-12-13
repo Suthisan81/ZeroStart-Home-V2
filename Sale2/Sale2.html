@@ -87,16 +87,20 @@
                 <label>ลักษณะพิเศษอื่น ๆ</label>
                 <div class="checkbox-group">
                     <div class="checkbox-item">
-                        <label><input type="checkbox" name="features" value="foreign-quota"> โควต้าต่างชาติ</label>
+                        <input type="checkbox" name="features" value="foreign-quota" id="foreign-quota">
+                        <label for="foreign-quota">โควต้าต่างชาติ</label>
                     </div>
                     <div class="checkbox-item">
-                        <label><input type="checkbox" name="features" value="pet-friendly"> อนุญาตเลี้ยงสัตว์</label>
+                        <input type="checkbox" name="features" value="pet-friendly" id="pet-friendly">
+                        <label for="pet-friendly">อนุญาตเลี้ยงสัตว์</label>
                     </div>
                     <div class="checkbox-item">
-                        <label><input type="checkbox" name="features" value="duplex"> ห้องแบบ Duplex</label>
+                        <input type="checkbox" name="features" value="duplex" id="duplex">
+                        <label for="duplex">ห้องแบบ Duplex</label>
                     </div>
                     <div class="checkbox-item">
-                        <label><input type="checkbox" name="features" value="penthouse"> ห้องแบบ Penthouse</label>
+                        <input type="checkbox" name="features" value="penthouse" id="penthouse">
+                        <label for="penthouse">ห้องแบบ Penthouse</label>
                     </div>
                 </div>
             </div>
@@ -120,28 +124,23 @@
 
             <div class="form-group file-upload">
                 <label for="images">รูปภาพ อสังหาฯ ที่คุณต้องการขาย</label>
-                <input type="file" id="images" name="images" multiple>
-                <div style="border: 2px dashed #ccc; padding: 20px; text-align: center;">วางรูปภาพของคุณที่นี่</div>
+                <input type="file" id="images" name="images" multiple onchange="previewImages()">
+                <div style="border: 2px dashed #ccc; padding: 20px; text-align: center;">
+                    วางรูปภาพของคุณที่นี่
+                </div>
+                <div id="image-preview" class="image-preview"></div>
             </div>
+            
 
             <div class="form-buttons">
+            <div class="form-box">
                 <button type="button" class="back-button">ย้อนกลับ</button>
                 <button type="submit" class="next-button">ถัดไป</button>
             </div>
+            
+            </div>
 
-            <script>
-                document.addEventListener('DOMContentLoaded', () => {
-                    const buttons = document.querySelectorAll('button');
-                    buttons.forEach(button => {
-                        button.addEventListener('click', () => {
-                            // ลบคลาส .selected จากทุกปุ่ม
-                            buttons.forEach(btn => btn.classList.remove('selected'));
-                            // เพิ่มคลาส .selected ให้กับปุ่มที่คลิก
-                            button.classList.add('selected');
-                        });
-                    });
-                });
-            </script>
+            <script src="script.js"></script>
         </form>
     </div>
 
