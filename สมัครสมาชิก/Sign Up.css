@@ -5,6 +5,25 @@ body {
     padding: 0;
 }
 
+a {
+    text-decoration: none; /* ลบเส้นใต้ปกติ */
+    color: rgb(255, 255, 255); /* สีลิงก์ปกติ */
+    transition: text-decoration 0.2s, color 0.2s; /* ทำให้เอฟเฟกต์ลื่นไหล */
+}
+
+a img{
+    transition: filter 0.3s, transform 0.3s; /* ทำให้การเปลี่ยนแปลงลื่นไหล */
+}
+/* เส้นใต้เมื่อเอาเมาส์วาง */
+a:hover {
+    color: #b6adff; /* เปลี่ยนสีลิงก์ */
+}
+
+a img:hover {
+    filter: #b6adff(100%) brightness(0.5); /* เปลี่ยนสี */
+            transform: scale(1.1); /* ขยายรูปเล็กน้อย */
+}
+
 header {
     background-color: #313775;
     color: white;
@@ -64,9 +83,16 @@ header {
 }
 
 .menu-items a {
-    color: white;
-    text-decoration: none;
+    text-decoration: none; /* ลบเส้นใต้ปกติ */
+    color: rgb(255, 255, 255); /* สีลิงก์ปกติ */
+    transition: text-decoration 0.2s, color 0.2s; /* ทำให้เอฟเฟกต์ลื่นไหล */
     margin: 0 20px;
+}
+
+/* เส้นใต้เมื่อเอาเมาส์วาง */
+.menu-items a:hover {
+    text-decoration: underline; /* แสดงเส้นใต้ */
+    color: #b6adff; /* เปลี่ยนสีลิงก์ */
 }
 
 .register {
