@@ -105,7 +105,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: #aca8a8; 
+    background-color: #f4f4f4; 
     padding: 20px;
     border-radius: 10px;
 }
@@ -114,7 +114,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #aca8a8;
+    background-color: #f4f4f4;
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -163,8 +163,9 @@ header {
 }
 
 .main-content {
+    margin-bottom: 10px;
     width: 60%;
-    padding: 20px;
+    padding: 30px;
 }
 
 .ad-section {
@@ -176,9 +177,11 @@ header {
 
 .post {
     background-color: #e0e0e0;
-    padding: 80px;
+    padding: 100px;
+    border-radius: 10px;
     margin-bottom: 20px;
     text-align: center;
+
 }
 footer {
     background-color: #313775;
