@@ -266,6 +266,17 @@ header {
     margin-bottom: 20px;
 }
 
+.container a {
+    text-decoration: none; /* ลบเส้นใต้ปกติ */
+    color: rgb(0, 0, 0); /* สีลิงก์ปกติ */
+    transition: text-decoration 0.2s, color 0.2s; /* ทำให้เอฟเฟกต์ลื่นไหล */
+}
+
+.container a:hover {
+    color: #b6adff; /* เปลี่ยนสีลิงก์ */
+
+}
+
 .card {
     border: 1px solid #ccc;
     border-radius: 10px;
