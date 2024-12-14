@@ -1,0 +1,230 @@
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #313775;
+    color: white;
+    padding: 3px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 1px;
+}
+
+.hamburger-menu {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar {
+    width: 20px;
+    height: 1.5px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.logo {
+    flex: 2;
+    text-align: left;
+    padding: 10px 0 0 0;
+}
+
+.name {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 25px;
+    font-size: 21px;
+}
+
+.logo-image {
+    width: 40%;
+    /* ปรับขนาดโลโก้ตามต้องการ */
+    max-width: 75px;
+    /* กำหนดขนาดสูงสุดเพื่อไม่ให้ใหญ่เกินไป */
+}
+
+
+.menu-items {
+    flex: 2;
+    display: flex;
+    /* ใช้ flexbox หรือถ้าจะใช้ inline-block ให้ลบคุณสมบัติ flex ออก */
+    justify-content: center;
+    /* เพิ่มเครื่องหมายเซมิโคลอนที่หายไป */
+    align-items: center;
+    /* ใช้ align-items แทน vertical-align สำหรับ flexbox */
+    margin-top: 10px;
+}
+
+
+.menu-items a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+.register {
+    flex: 1;
+    text-align: right;
+}
+
+.register a {
+    color: white;
+    text-decoration: none;
+}
+
+.image-user {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    max-width: 35px;
+}
+
+.content {
+    display: flex;
+    margin: 80px;
+}
+
+.sidebar-container {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 20%;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f4f4f4; 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.user-profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.user-profile span {
+    font-size: 14px;
+    color: #333;
+}
+
+.user-profile a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.user-profile a:hover {
+    color: #313775;
+}
+
+
+.sidebar button {
+    padding: 10px;
+    border: none;
+    background-color: #313775;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background-color: #515bb5;
+}
+
+.login-signup {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.main-content {
+    margin-bottom: 10px;
+    width: 60%;
+    padding: 30px;
+}
+
+.ad-section {
+    width: 20%;
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.post {
+    background-color: #e0e0e0;
+    padding: 100px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+footer {
+    background-color: #313775;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.creator-container {
+    display: flex;
+    /* ใช้ flexbox เพื่อจัดการตำแหน่งในแนวนอน */
+    justify-content: center;
+    /* กระจายระหว่างช่องว่างในแนวนอน */
+    gap: 10px;
+    /* ระยะห่างระหว่าง .creator แต่ละอัน */
+    /*flex-wrap: wrap;        /* ถ้าหน้าจอเล็กจะทำให้แถวใหม่ */
+    padding: 20px;
+}
+
+.creator {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    background-color: #313775;
+    border: 1px solid #313775;
+    max-width: 300px;
+    /* ปรับขนาดให้ไม่เกิน 300px */
+    width: 200%;
+    /* ทำให้แต่ละ .creator สามารถขยายได้ */
+    border-radius: 8px;
+    text-align: left;
+}
+
+.creator-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.creator-info a:hover {
+    text-decoration: underline;
+}
+
+.creator-info h1 {
+    margin: 10px 0;
+    font-size: 16px;
+}
