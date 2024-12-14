@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sale3</title>
-    <link rel="stylesheet" href="Sale3.css">
+    <title>User</title>
+    <link rel="stylesheet" href="User.css">
 </head>
 
 <body>
@@ -25,8 +25,6 @@
                     <a href="#">นายหน้า</a>
                     <a href="#">เกี่ยวกับ</a>
 
-
-
                     <a href="#" class="hamburger-menu">
                         <div class="bar"></div>
                         <div class="bar"></div>
@@ -39,62 +37,35 @@
         </div>
     </header>
 
-    <div class="large-product-image">
-        <img src="images/homepage1.jpeg" class="resize-image">
-        <div class="wrapper">
-            <div class="title">ประกาศขาย</div>
+
+    <div class="content">
+        <div class="sidebar-container">
+            <aside class="sidebar">
+                <div class="user-profile">
+                    <img src="images/user.png" alt="User">
+                    <span>
+                        <a href="login.html">เข้าสู่ระบบ</a> |
+                        <a href="signup.html">สมัครสมาชิก</a>
+                    </span>
+                </div>
+                <button>รายการประกาศ</button>
+                <button>ค้นหา</button>
+                <button>สร้างโพสต์ใหม่</button>
+            </aside>
+        </div>
+
+        <main class="main-content">
+            <div class="post">โพสต์ 1</div>
+            <div class="post">โพสต์ 2</div>
+            <div class="post">โพสต์ 3</div>
+            <div class="post">โพสต์ 4</div>
+        </main>
+
+        <div class="ad-section">
+            <p>พื้นที่โฆษณา</p>
+            <p>081-068-8652</p>
         </div>
     </div>
-
-    <div class="form-container">
-        <div class="step-indicator">
-            <div class="step active">1</div>
-            <div class="step active">2</div>
-            <div class="step active">3</div>
-        </div>
-
-        <form>
-            <div class="section">
-                <label>หัวข้อ</label>
-                <input type="text" placeholder="ใส่หัวข้อ" readonly>
-            </div>
-
-            <div class="section">
-                <label>ทำเลและที่ตั้ง</label>
-                <input type="text" placeholder="ทำเล" readonly>
-            </div>
-
-            <div class="section">
-                <label>ข้อมูลอสังหา</label>
-                <input type="text" placeholder="พื้นที่ใช้สอย" readonly>
-            </div>
-
-            <div class="section">
-                <label>ลักษณะพิเศษอื่นๆ</label>
-                <textarea rows="3" placeholder="เช่น สนามหญ้าหรือสระว่ายน้ำ" readonly></textarea>
-            </div>
-
-            <div class="image-preview">
-                <img src="https://via.placeholder.com/400x300" alt="ตัวอย่างรูปภาพ">
-            </div>
-
-            <div class="section">
-                <label>รายละเอียด</label>
-                <textarea rows="5" placeholder="เช่น ใกล้ MRT, ใกล้ BTS" readonly></textarea>
-            </div>
-
-
-            <div class="form-box">
-                <button type="button" class="back-button">ย้อนกลับ</button>
-                <button type="submit" class="next-button">ถัดไป</button>
-            </div>
-
-    </div>
-
-    <script src="script.js"></script>
-    </form>
-    </div>
-
 
     <footer>
         <div class="creator-container">
