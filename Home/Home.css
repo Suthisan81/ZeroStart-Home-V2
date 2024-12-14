@@ -39,19 +39,6 @@ header {
     padding: 1px;
 }
 
-.hamburger-menu {
-    display: inline-block;
-    cursor: pointer;
-}
-
-.bar {
-    width: 20px;
-    height: 1.5px;
-    background-color: white;
-    margin: 5px 0;
-    transition: 0.3s;
-}
-
 .logo {
     flex: 2;
     text-align: left;
