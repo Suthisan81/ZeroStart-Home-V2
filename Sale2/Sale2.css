@@ -359,13 +359,26 @@ textarea, input {
     margin-top: 10px;
 }
 
+.back-button {
+    width: 400px;
+    background-color: #e1dede;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    display: block;
+}
+
 .next-button {
-    width: 100%;
+    width: 400px;
     background-color: #313775;
     color: white;
     padding: 10px;
     border: none;
     border-radius: 5px;
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    display: block;
 }
 
 .form-box {

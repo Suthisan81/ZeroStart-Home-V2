@@ -314,13 +314,16 @@ textarea, input {
 }
 
 .next-button {
-    width: 100%;
+    width: 800px;
     background-color: #313775;
     color: white;
     padding: 10px;
     border: none;
     border-radius: 5px;
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    display: block;
 }
+
 
 
 footer {
