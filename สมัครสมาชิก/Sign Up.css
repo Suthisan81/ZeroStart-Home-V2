@@ -40,19 +40,6 @@ header {
     padding: 1px;
 }
 
-.hamburger-menu {
-    display: inline-block;
-    cursor: pointer;
-}
-
-.bar {
-    width: 20px;
-    height: 1.5px;
-    background-color: white;
-    margin: 5px 0;
-    transition: 0.3s;
-}
-
 .logo {
     flex: 2;
     text-align: left;
@@ -254,49 +241,71 @@ form button.submit-btn:hover {
 footer {
     background-color: #313775;
     color: white;
-    padding: 10px 0;
-    text-align: center;
-    width: 100%;
-    bottom: 0;
-    /* ระบุตำแหน่งที่ขอบล่าง */
-    z-index: 1000;
-    /* ป้องกันไม่ให้เนื้อหาอื่นบัง */
-}
-
-.creator-container {
-    display: flex;
-    /* ใช้ flexbox เพื่อจัดการตำแหน่งในแนวนอน */
-    justify-content: center;
-    /* กระจายระหว่างช่องว่างในแนวนอน */
-    gap: 10px;
-    /* ระยะห่างระหว่าง .creator แต่ละอัน */
-    /*flex-wrap: wrap;        /* ถ้าหน้าจอเล็กจะทำให้แถวใหม่ */
-    padding: 20px;
-}
-
-.creator {
-    font-family: Arial, sans-serif;
     padding: 10px;
-    background-color: #313775;
-    border: 1px solid #313775;
-    max-width: 300px;
-    /* ปรับขนาดให้ไม่เกิน 300px */
-    width: 200%;
-    /* ทำให้แต่ละ .creator สามารถขยายได้ */
-    border-radius: 8px;
-    text-align: left;
+    text-align: center;
 }
 
-.creator-info a {
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    position: relative; /* ใช้เพื่อจัดตำแหน่งภายใน container */
+    display: inline-block; /* ทำให้ element อยู่ในแนวนอน */
+    text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
+}
+
+.logo-container a {
+    display: block; /* ทำให้ลิงก์คลุมทั้งพื้นที่ */
+    text-decoration: none; /* เอาขีดเส้นใต้ของลิงก์ออก */
+    color: white; /* กำหนดสีข้อความ */
+}
+
+.logo-container img {
+    display: block; /* ทำให้ภาพไม่กินพื้นที่เกิน */
+    margin: 0 auto; /* จัดภาพให้อยู่กึ่งกลาง */
+    max-width: 450px; /* จำกัดขนาดสูงสุดของภาพ */
+}
+
+
+.footer-section {
+    max-width: 300px;
+    margin: 5px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
     color: white;
     text-decoration: none;
 }
 
-.creator-info a:hover {
+.footer-section a:hover {
     text-decoration: underline;
 }
 
-.creator-info h1 {
-    margin: 10px 0;
-    font-size: 16px;
+.footer-section p1 {
+    margin: 5px 0;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links ul li a1 {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links ul li a1:hover {
+    text-decoration: underline;
 }
