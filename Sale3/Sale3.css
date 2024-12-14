@@ -40,8 +40,8 @@ header {
 }
 
 .name {
-    display: inline-block; 
-    vertical-align: middle; 
+    display: inline-block;
+    vertical-align: middle;
     margin-bottom: 25px;
     font-size: 21px;
 }
@@ -56,9 +56,12 @@ header {
 
 .menu-items {
     flex: 2;
-    display: flex; /* ใช้ flexbox หรือถ้าจะใช้ inline-block ให้ลบคุณสมบัติ flex ออก */
-    justify-content: center; /* เพิ่มเครื่องหมายเซมิโคลอนที่หายไป */
-    align-items: center; /* ใช้ align-items แทน vertical-align สำหรับ flexbox */
+    display: flex;
+    /* ใช้ flexbox หรือถ้าจะใช้ inline-block ให้ลบคุณสมบัติ flex ออก */
+    justify-content: center;
+    /* เพิ่มเครื่องหมายเซมิโคลอนที่หายไป */
+    align-items: center;
+    /* ใช้ align-items แทน vertical-align สำหรับ flexbox */
     margin-top: 10px;
 }
 
@@ -80,8 +83,8 @@ header {
 }
 
 .image-user {
-    display: inline-block; 
-    vertical-align: top; 
+    display: inline-block;
+    vertical-align: top;
     width: 40%;
     max-width: 35px;
 }
@@ -102,34 +105,14 @@ header {
 
 .search-container {
     display: flex;
-    justify-content: center; /* จัดให้อยู่กึ่งกลาง */
+    justify-content: center;
+    /* จัดให้อยู่กึ่งกลาง */
     align-items: center;
-    padding: 0px 0; /* เพิ่มระยะห่าง */
+    padding: 0px 0;
+    /* เพิ่มระยะห่าง */
 }
 
-.image-product {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
 
-.image-title {
-    text-align: left;
-    font-weight: bold;
-    font-size: 24px;
-}
-
-.image-more {
-    text-align: right;
-    font-size: 16px;
-    color: #16285F;
-    text-decoration: none;
-}
-
-.image-more a:hover {
-    text-decoration: underline;
-}
 
 .wrapper {
     position: absolute;
@@ -156,7 +139,8 @@ header {
     background-color: white;
     margin: 0 auto;
     padding: 50px;
-    width: 100%; /* ขยายให้เต็มหน้าจอ */
+    width: 100%;
+    /* ขยายให้เต็มหน้าจอ */
     max-width: 800px;
 }
 
@@ -164,7 +148,8 @@ header {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
-    gap: 50px;  /* เพิ่มระยะห่างระหว่าง step */
+    gap: 50px;
+    /* เพิ่มระยะห่างระหว่าง step */
 }
 
 .step {
@@ -172,13 +157,15 @@ header {
     height: 50px;
     border-radius: 50%;
     background-color: #ddd;
-    margin: 0 60px;  /* เพิ่มระยะห่างซ้ายขวาของแต่ละ step */
+    margin: 0 60px;
+    /* เพิ่มระยะห่างซ้ายขวาของแต่ละ step */
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
     color: #666;
-    font-size: 24px; /* ปรับขนาดตัวเลขให้ใหญ่ขึ้น */
+    font-size: 24px;
+    /* ปรับขนาดตัวเลขให้ใหญ่ขึ้น */
 }
 
 .step.active {
@@ -186,7 +173,27 @@ header {
     color: white;
 }
 
+.section input[readonly], .section textarea[readonly] {
+    background-color: #f1f1f1;
+    color: #666;
+    cursor: not-allowed;
+    margin-bottom: 15px; /* เพิ่มระยะห่างด้านล่างระหว่างช่องกรอกข้อมูล */
+}
 
+.section textarea[readonly] {
+    line-height: 3; /* เพิ่มระยะห่างระหว่างบรรทัดใน textarea */
+}
+
+
+.image-preview {
+    text-align: center;
+}
+
+.image-preview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
 
 button {
     padding: 10px 20px;
@@ -197,7 +204,8 @@ button {
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s ease;
-    width: 48%;  /* ทำให้ทั้งสองปุ่มมีขนาดเท่ากัน */
+    width: 48%;
+    /* ทำให้ทั้งสองปุ่มมีขนาดเท่ากัน */
 }
 
 button:hover {
@@ -205,7 +213,8 @@ button:hover {
 }
 
 button.selected {
-    background-color: #313775;  /* เปลี่ยนสีเมื่อเลือก */
+    background-color: #313775;
+    /* เปลี่ยนสีเมื่อเลือก */
     color: white;
 }
 
@@ -215,7 +224,8 @@ button:active {
 }
 
 
-textarea, input {
+textarea,
+input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
@@ -235,11 +245,13 @@ textarea, input {
 .form-box {
     display: flex;
     justify-content: space-between;
-    gap: 20px;  /* เพิ่มช่องว่างระหว่างปุ่ม */
+    gap: 20px;
+    /* เพิ่มช่องว่างระหว่างปุ่ม */
 }
 
 .form-box button {
-    flex: 1;  /* ทำให้ปุ่มมีขนาดเท่ากัน */
+    flex: 1;
+    /* ทำให้ปุ่มมีขนาดเท่ากัน */
 }
 
 footer {
