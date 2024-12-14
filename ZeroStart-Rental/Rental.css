@@ -185,7 +185,8 @@ header {
 .image-title {
     text-align: left;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 18px;
+
 }
 
 .image-more {
@@ -261,33 +262,52 @@ header {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    gap: 20px;
-    
+    gap: 35px;
+    margin-bottom: 20px;
 }
 
-.product {
-    background-color: white;
-    border-radius: 5px;
-    margin: 3px;
-    padding: 5px;
-    width: 275px;
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
     text-align: center;
-    transition: transform 0.2s;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    width: 250px;
+    height: 340px;
 }
 
-.product:hover {
-    transform: translateY(-5px);
+.card:hover {
+    transform: scale(1.05);
 }
 
-.product img {
+.card img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
 }
 
-.product h2 {
+.card h2 {
+    margin: 5px 0;
     font-size: 1.2em;
-    margin: 10px 0;
+}
+
+.card p {
+    display: flex;            
+    align-items: center;
+    text-align: left; 
+    padding: 0px 5px 0 5px;
+    color: rgb(84, 84, 84);
+}
+
+.dollar {
+    width: 15px;
+    height: auto;
+    max-width: 18px; 
+    overflow: visible;
+    margin-right: 5px;        /* เพิ่มระยะห่างระหว่างไอคอนและข้อความ */
+    opacity: 0.7;
 }
 
 .creator-container {
