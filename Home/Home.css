@@ -274,15 +274,6 @@ footer {
     max-width: 450px; /* จำกัดขนาดสูงสุดของภาพ */
 }
 
-.logo-container span {
-    position: absolute; /* ใช้เพื่อวางข้อความทับบนรูป */
-    top: 70%; /* จัดให้อยู่กึ่งกลางแนวตั้ง */
-    left: 50%; /* จัดให้อยู่กึ่งกลางแนวนอน */
-    transform: translate(-50%, -50%); /* ทำให้ข้อความอยู่ตรงกลางสมบูรณ์ */
-    font-size: 16px; /* ขนาดของฟอนต์ */
-    font-weight: Normal; /* ความหนาของฟอนต์ */
-    color: white; /* สีของข้อความ*/
-}
 
 .footer-section {
     max-width: 300px;
