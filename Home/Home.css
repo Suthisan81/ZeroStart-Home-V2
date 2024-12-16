@@ -5,11 +5,7 @@ body {
     padding: 0;
 }
 
-a {
-    text-decoration: none; /* ลบเส้นใต้ปกติ */
-    color: rgb(255, 255, 255); /* สีลิงก์ปกติ */
-    transition: text-decoration 0.2s, color 0.2s; /* ทำให้เอฟเฟกต์ลื่นไหล */
-}
+
 
 a img{
     transition: filter 0.3s, transform 0.3s; /* ทำให้การเปลี่ยนแปลงลื่นไหล */
@@ -97,6 +93,8 @@ header {
     width: 40%;
     max-width: 35px;
 }
+
+
 
 .large-product-image {
     position: relative;
