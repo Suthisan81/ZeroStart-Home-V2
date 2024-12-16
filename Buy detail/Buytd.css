@@ -1,8 +1,9 @@
 body {
-    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: white;
     margin: 0;
-    display: flex;
-    flex-direction: column;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 a {
@@ -28,8 +29,10 @@ header {
     background-color: #313775;
     color: white;
     padding: 3px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* เพิ่มเงาให้ฟอร์มเด่นขึ้น */
+    position: relative; /* กำหนด position เพื่อให้ z-index ทำงาน */
+    z-index: 1010; /* เพิ่มระดับ z-index ให้สูงกว่า .container */
 }
-
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -46,8 +49,8 @@ header {
 }
 
 .name {
-    display: inline-block;
-    vertical-align: middle;
+    display: inline-block; 
+    vertical-align: middle; 
     margin-bottom: 25px;
     font-size: 21px;
 }
@@ -59,6 +62,20 @@ header {
     /* กำหนดขนาดสูงสุดเพื่อไม่ให้ใหญ่เกินไป */
 }
 
+.large-product-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin: 0;
+}
+
+.large-product-image img {
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+}
+
 
 .menu-items {
     flex: 2;
@@ -67,7 +84,6 @@ header {
     align-items: center; /* ใช้ align-items แทน vertical-align สำหรับ flexbox */
     margin-top: 10px;
 }
-
 
 .menu-items a {
     text-decoration: none; /* ลบเส้นใต้ปกติ */
@@ -98,99 +114,100 @@ header {
     max-width: 35px;
 }
 
-.content {
-    display: flex;
-    margin: 80px;
-}
-
-.sidebar-container {
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 15px;
-    width: 20%;
-}
-
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: #f4f4f4; 
+.main {
     padding: 20px;
-    border-radius: 10px;
+    margin-top: 15px;
 }
 
-.user-profile {
-    display: flex;
-    flex-direction: column;
+.property-details {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
     align-items: center;
-    background-color: #f4f4f4;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
 }
 
-.user-profile img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+.image-section {
+    display: flex; /* จัดเรียงลูกในแนวนอน */
+    justify-content: space-between; /* กระจายพื้นที่ระหว่างลูก */
+    align-items: center; /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    gap: 10px; /* เพิ่มระยะห่างระหว่างลูก */
 }
 
-.user-profile span {
-    font-size: 14px;
-    color: #333;
+.main-image {
+    width: 1700px;
+    height: 500px;
+    border-radius: 10px ;
+    overflow: hidden;
 }
 
-.user-profile a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
+.main-image img {
+    width: 100%; /* ทำให้รูปพอดีกับกรอบ */
+    height: 100%;
+    object-fit: cover; /* ปรับขนาดรูปให้เต็มกรอบ */
+} 
 
-.user-profile a:hover {
-    color: #313775;
-}
-
-
-.sidebar button {
-    padding: 10px;
-    border: none;
-    background-color: #313775;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.sidebar button:hover {
-    background-color: #515bb5;
-}
-
-.login-signup {
+.thumbnails {
+    width: 450px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     gap: 10px;
 }
 
-.main-content {
-    margin-bottom: 10px;
-    width: 60%;
-    padding: 30px;
+.thumbnails img {
+    width: 160px;
+    height: 160px;
+    border-radius: 5px;
 }
 
-.ad-section {
-    width: 20%;
-    padding: 20px;
-    text-align: center;
-    background-color: #f4f4f4;
+.thumbnails .more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 160px;
+    background-color: #ccc;
+    border-radius: 5px;
+    font-size: 18px;
 }
 
-.post {
-    background-color: #e0e0e0;
-    padding: 100px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+.property-info {
+    display: flex;
+    justify-content: space-around; /* กระจายแต่ละกลุ่มไอคอน */
+    align-items: center; /* จัดกลุ่มให้อยู่ตรงกลางในแนวตั้ง */
     text-align: center;
+    margin: 20px 0;
+}
 
+.icon-image {
+    display: flex;
+    flex-direction: column; /* จัดไอคอนและข้อความในแนวตั้ง */
+    align-items: center; /* จัดให้อยู่ตรงกลาง */
+    text-align: center;
+    margin: 0 10px; /* ระยะห่างระหว่างกลุ่ม */
+}
+
+.icon-image img {
+    max-width: 40px; /* จำกัดขนาดไอคอน */
+    margin-bottom: 5px; /* เพิ่มระยะห่างระหว่างไอคอนและข้อความ */
+}
+
+h2 {
+    margin-bottom: 1px;
+    font-size: 23px;
+    text-align: left;
+}
+
+p {
+    margin-bottom: 1px;
+    font-size: 18px;
+    text-align: left;
+}
+
+
+
+.google-map {
+    color: #ff0000;
+    text-decoration: none;
 }
 
 footer {

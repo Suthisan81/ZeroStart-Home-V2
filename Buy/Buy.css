@@ -1,8 +1,9 @@
 body {
-    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: white;
     margin: 0;
-    display: flex;
-    flex-direction: column;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 a {
@@ -28,6 +29,7 @@ header {
     background-color: #313775;
     color: white;
     padding: 3px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
 }
 
 .header-container {
@@ -46,8 +48,8 @@ header {
 }
 
 .name {
-    display: inline-block;
-    vertical-align: middle;
+    display: inline-block; 
+    vertical-align: middle; 
     margin-bottom: 25px;
     font-size: 21px;
 }
@@ -97,100 +99,212 @@ header {
     vertical-align: top; 
     max-width: 35px;
 }
-
-.content {
-    display: flex;
-    margin: 80px;
+.large-product-image {
+    position: relative; /* ทำให้เป็น container ของฟอร์ม */
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.sidebar-container {
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 15px;
-    width: 20%;
+.large-product-image img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.sidebar {
+.search-container {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: #f4f4f4; 
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.user-profile {
-    display: flex;
-    flex-direction: column;
+    justify-content: center; /* จัดให้อยู่กึ่งกลาง */
     align-items: center;
-    background-color: #f4f4f4;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    padding: 0px 0; /* เพิ่มระยะห่าง */
 }
 
-.user-profile img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+/* แถบค้นหา */
+.search-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* ระยะห่างระหว่าง Input และปุ่ม */
+    width: auto;
 }
 
-.user-profile span {
-    font-size: 14px;
-    color: #333;
-}
-
-.user-profile a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-.user-profile a:hover {
-    color: #313775;
-}
-
-
-.sidebar button {
+.search-overlay input {
+    width: 300px;
     padding: 10px;
-    border: none;
-    background-color: #313775;
+    border-radius: 20px 0 0 20px;
+    border: 1px solid #ccc;
+}
+
+.search-overlay button {
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+    background-color: #16285F;
     color: white;
-    border-radius: 5px;
+    border: none;
     cursor: pointer;
 }
 
-.sidebar button:hover {
-    background-color: #515bb5;
+.search-overlay button:hover {
+    background-color: #0d1a44;
+    transform: scale(1.05);
 }
 
-.login-signup {
+
+
+.product-wrapper {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1250px;
+    overflow-x: auto;
+}
+
+.image-product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.image-title {
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+.image-more {
+    text-align: right;
+    font-size: 16px;
+    color: #16285F;
+    text-decoration: none;
+}
+
+.image-more a:hover {
+    text-decoration: underline;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /*background-color: rgba(255, 255, 255, 0.8);*/
+    padding: 20px;
+    border-radius: 10px;
+    /*box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);*/
+    width: 60%;
+    max-width: 500px;
+}
+
+.box-image {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* ระยะห่างระหว่าง Input และปุ่ม */
+    width: auto;
+}
+
+.search-overlay {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.button-wrapper {
     display: flex;
     justify-content: center;
     gap: 10px;
-}
-
-.main-content {
-    margin-bottom: 10px;
-    width: 60%;
-    padding: 30px;
-}
-
-.ad-section {
-    width: 20%;
-    padding: 20px;
-    text-align: center;
-    background-color: #f4f4f4;
-}
-
-.post {
-    background-color: #e0e0e0;
-    padding: 100px;
-    border-radius: 10px;
     margin-bottom: 20px;
-    text-align: center;
+}
 
+.button {
+    background-color: #4b4c9c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 20px;
+}
+
+.container a {
+    text-decoration: none; /* ลบเส้นใต้ปกติ */
+    color: rgb(0, 0, 0); /* สีลิงก์ปกติ */
+    transition: text-decoration 0.2s, color 0.2s; /* ทำให้เอฟเฟกต์ลื่นไหล */
+}
+
+.container a:hover {
+    color: #b6adff; /* เปลี่ยนสีลิงก์ */
+
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    width: 250px;
+    height: 340px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.card h2 {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+.card p {
+    display: flex;            
+    align-items: center;
+    text-align: left; 
+    padding: 0px 5px 0 5px;
+    color: rgb(84, 84, 84);
+}
+
+.dollar {
+    width: 15px;
+    height: auto;
+    max-width: 18px; 
+    overflow: visible;
+    margin-right: 5px;        /* เพิ่มระยะห่างระหว่างไอคอนและข้อความ */
+    opacity: 0.7;
 }
 
 footer {

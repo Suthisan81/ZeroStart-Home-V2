@@ -5,6 +5,25 @@ body {
     flex-direction: column;
 }
 
+a {
+    text-decoration: none; /* ลบเส้นใต้ปกติ */
+    color: rgb(255, 255, 255); /* สีลิงก์ปกติ */
+    transition: text-decoration 0.2s, color 0.2s; /* ทำให้เอฟเฟกต์ลื่นไหล */
+}
+
+a img{
+    transition: filter 0.3s, transform 0.3s; /* ทำให้การเปลี่ยนแปลงลื่นไหล */
+}
+/* เส้นใต้เมื่อเอาเมาส์วาง */
+a:hover {
+    color: #b6adff; /* เปลี่ยนสีลิงก์ */
+}
+
+a img:hover {
+    filter: #b6adff(100%) brightness(0.5); /* เปลี่ยนสี */
+            transform: scale(1.1); /* ขยายรูปเล็กน้อย */
+}
+
 header {
     background-color: #313775;
     color: white;
@@ -43,13 +62,24 @@ header {
 
 .menu-items {
     flex: 2;
-    display: flex;
-    /* ใช้ flexbox หรือถ้าจะใช้ inline-block ให้ลบคุณสมบัติ flex ออก */
-    justify-content: center;
-    /* เพิ่มเครื่องหมายเซมิโคลอนที่หายไป */
-    align-items: center;
-    /* ใช้ align-items แทน vertical-align สำหรับ flexbox */
+    display: flex; /* ใช้ flexbox หรือถ้าจะใช้ inline-block ให้ลบคุณสมบัติ flex ออก */
+    justify-content: center; /* เพิ่มเครื่องหมายเซมิโคลอนที่หายไป */
+    align-items: center; /* ใช้ align-items แทน vertical-align สำหรับ flexbox */
     margin-top: 10px;
+}
+
+
+.menu-items a {
+    text-decoration: none; /* ลบเส้นใต้ปกติ */
+    color: rgb(255, 255, 255); /* สีลิงก์ปกติ */
+    transition: text-decoration 0.2s, color 0.2s; /* ทำให้เอฟเฟกต์ลื่นไหล */
+    margin: 0 20px;
+}
+
+/* เส้นใต้เมื่อเอาเมาส์วาง */
+.menu-items a:hover {
+    text-decoration: underline; /* แสดงเส้นใต้ */
+    color: #b6adff; /* เปลี่ยนสีลิงก์ */
 }
 
 
