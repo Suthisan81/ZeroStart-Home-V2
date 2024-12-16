@@ -70,9 +70,8 @@ header {
 }
 
 .image-user {
-    display: inline-block;
-    vertical-align: top;
-    width: 40%;
+    display: inline-block; 
+    vertical-align: top; 
     max-width: 35px;
 }
 
