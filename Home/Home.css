@@ -151,6 +151,14 @@ header {
     overflow-x: auto;
 }
 
+.product-wrapper a {
+    color: black;
+}
+
+.product-wrapper a:hover {
+    color: #ff0000; /* เปลี่ยนสีลิงก์ */
+}
+
 .image-product {
     display: flex;
     justify-content: space-between;
